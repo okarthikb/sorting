@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Assistant';
+  src: url('Assistant-Regular.otf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+textarea {
+  resize: none;
+  font-family: inherit;
+  height: 1.7em;
+  margin: 0 1em 0 1em;
+}
+
+label {
+  margin: 0 1em 0 1em;
+}
+
+.page {
+  position: relative;
+  margin: 2em auto;
+  width: clamp(200px, 90%, 500px);
+  font-family: 'Assistant', Helvetica, sans-serif;
+}
+
+.flex {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1em auto;
+}
+
+.button {
+  padding: 0.5em;
+  margin: 0 1em 0 1em;
+  color: darkorange;
+}
+
+.button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: darkred;
+}
+
+#box {
+  width: 80%;
+}
+
+#status {
+  position: absolute;
+  visibility: hidden;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: darkorange;
+}
