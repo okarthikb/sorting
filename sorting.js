@@ -136,12 +136,14 @@ shuffle.onclick = () => {
   A = [];
   field.innerHTML = '';
   status.style.visibility = 'hidden';
-  let items = parseInt(itemsBox.value, 10);
-      dW = items ? boxWidth / items : undefined;
+  let items = parseInt(itemsBox.value, 10),
+      dW = items ? boxWidth / items : undefined,
+      fieldInnerHTML = '';
   for (let i = 0; i < items; i++) {
     A.push(Math.random() * boxHeight);
-    field.innerHTML += rectangle(i, A[i], dW, i * dW);
+    fieldInnerHTML += rectangle(i, A[i], dW, i * dW);
   }
+  field.innerHTML = fieldInnerHTML;
 }
 
 reset.onclick = () => {
@@ -152,24 +154,28 @@ reset.onclick = () => {
 }
 
 mergeSortButton.onclick = () => {
+  status.style.visibility = 'hidden';
   mergeSort(A).then(
     () => { status.style.visibility = 'visible'; }
   );
 }
 
 bubbleSortButton.onclick = () => {
+  status.style.visibility = 'hidden';
   bubbleSort(A).then(
     () => { status.style.visibility = 'visible'; }
   );
 }
 
 insertionSortButton.onclick = () => {
+  status.style.visibility = 'hidden';
   insertionSort(A).then(
     () => { status.style.visibility = 'visible'; }
   );
 }
 
 quickSortButton.onclick = () => {
+  status.style.visibility = 'hidden';
   quickSort(A).then(
     () => { status.style.visibility = 'visible'; }
   );
