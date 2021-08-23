@@ -155,28 +155,24 @@ reset.onclick = () => {
 
 mergeSortButton.onclick = () => {
   status.style.visibility = 'hidden';
-  mergeSort(A).then(
-    () => { status.style.visibility = 'visible'; }
-  );
+  mergeSort(A);
+  status.style.visibility = 'visible';
 }
 
 bubbleSortButton.onclick = () => {
   status.style.visibility = 'hidden';
-  bubbleSort(A).then(
-    () => { status.style.visibility = 'visible'; }
-  );
+  bubbleSort(A);
+  status.style.visibility = 'visible';
 }
 
 insertionSortButton.onclick = () => {
   status.style.visibility = 'hidden';
-  insertionSort(A).then(
-    () => { status.style.visibility = 'visible'; }
-  );
+  insertionSort(A);
+  status.style.visibility = 'visible';
 }
 
 quickSortButton.onclick = () => {
   status.style.visibility = 'hidden';
-  quickSort(A).then(
-    () => { status.style.visibility = 'visible'; }
-  );
+  quickSort(A);
+  status.style.visibility = 'visible';
 }
